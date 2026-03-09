@@ -1,1 +1,305 @@
-test
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Wycieczki: Zurych - Como</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        @media print {
+            .no-print { display: none; }
+            body { background-color: white; }
+            .shadow-custom { box-shadow: none; border: 1px solid #e2e8f0; }
+            img { page-break-inside: avoid; }
+            .print-opacity-100 { opacity: 1 !important; }
+        }
+        .shadow-custom {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+<div class="max-w-4xl mx-auto bg-white rounded-xl shadow-custom overflow-hidden">
+    <!-- Header -->
+    <div class="relative bg-slate-900 p-8 text-white overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1596482181716-e51f501b44ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Jezioro Como" class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+        </div>
+        <div class="relative z-10 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold uppercase tracking-tight shadow-sm">Plan Wycieczki</h1>
+                <p class="text-slate-200 mt-1 font-medium drop-shadow-md">Zurych HB ➔ Como San Giovanni ➔ Lenno</p>
+            </div>
+            <button onclick="window.print()" class="no-print bg-white/90 backdrop-blur-sm text-slate-900 px-4 py-2 rounded-lg font-semibold hover:bg-white transition shadow-lg">
+                Zapisz jako PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- Info Bar -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-6 bg-slate-50 border-b border-slate-100">
+        <div class="flex items-center space-x-3">
+            <div class="bg-blue-100 p-2 rounded-full text-blue-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <div>
+                <p class="text-xs text-slate-500 uppercase font-bold tracking-wider">Start (Zurich HB)</p>
+                <p class="font-bold text-xl text-slate-800">07:33</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-3">
+            <div class="bg-green-100 p-2 rounded-full text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+            </div>
+            <div>
+                <p class="text-xs text-slate-500 uppercase font-bold tracking-wider">Przyjazd (Como S.G.)</p>
+                <p class="font-bold text-xl text-slate-800">10:08</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tickets Section -->
+    <div class="p-8 pb-4">
+        <h2 class="text-xl font-bold text-slate-800 mb-6 flex items-center">
+            <span class="mr-2">🎫</span> Bilety i Transport
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-50 border border-slate-200 p-5 rounded-lg">
+                <h3 class="font-semibold text-slate-700 mb-2 underline">Wymagane dokumenty:</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-slate-600 text-sm">
+                        <span class="h-2 w-2 bg-blue-500 rounded-full mr-3"></span>
+                        2x Saver Day Pass
+                    </li>
+                    <li class="flex items-center text-slate-600 text-sm">
+                        <span class="h-2 w-2 bg-blue-500 rounded-full mr-3"></span>
+                        1x Saver Day Pass
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-5 rounded-r-lg">
+                <h3 class="font-bold text-blue-800 text-xs uppercase tracking-wide mb-2">Pociąg - Info o Chiasso:</h3>
+                <p class="text-blue-700 text-sm leading-relaxed">
+                    Odcinek <strong>Chiasso ➔ Como</strong> jest w pełni pokryty przez <strong>Saver Day Pass</strong> (nie trzeba uiszczać standardowej dopłaty 11 CHF).
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-4 bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
+            <p class="text-amber-800 text-sm">
+                <strong>Bilety na prom:</strong> Rano, będąc w porcie w Como, od razu kupcie bilety powrotne z Lenno do Como na godzinę 17:16.
+            </p>
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="p-8 pt-4">
+        <h2 class="text-xl font-bold text-slate-800 mb-6 flex items-center">
+            <span class="mr-2">🗺️</span> Przebieg Dnia
+        </h2>
+
+        <div class="space-y-6">
+            <!-- Departure from Zurich -->
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                    <div class="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">1</div>
+                    <div class="w-0.5 h-full bg-slate-200 -mt-2"></div>
+                </div>
+                <div class="pb-6 w-full">
+                    <p class="text-sm font-bold text-slate-900">07:33</p>
+                    <p class="text-slate-700 font-semibold italic text-sm">Początek wycieczki:</p>
+                    <p class="text-slate-600 text-sm mt-1">Wyjazd pociągiem ze stacji <strong>Zurich HB</strong> w stronę Włoch.</p>
+                </div>
+            </div>
+
+            <!-- Arrival -->
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">2</div>
+                    <div class="w-0.5 h-full bg-slate-200 -mt-2"></div>
+                </div>
+                <div class="pb-6 w-full">
+                    <p class="text-sm font-bold text-slate-900">10:08</p>
+                    <p class="text-slate-700">Przyjazd na stację <strong>Como San Giovanni</strong>.</p>
+                </div>
+            </div>
+
+            <!-- Shopping -->
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">3</div>
+                    <div class="w-0.5 h-full bg-slate-200 -mt-2"></div>
+                </div>
+                <div class="pb-6 w-full">
+                    <p class="text-sm font-bold text-slate-900">10:15 - 11:20</p>
+                    <p class="text-slate-700 font-semibold italic text-sm">Przygotowania w Como:</p>
+                    <p class="text-slate-600 text-sm">Spacer w stronę portu. Uzupełnienie prowiantu przed rejsem: zakup wody, słodyczy oraz <strong>obiadku na wynos</strong>.</p>
+                </div>
+            </div>
+
+            <!-- Boat Trip -->
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                    <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">4</div>
+                    <div class="w-0.5 h-full bg-slate-200 -mt-2"></div>
+                </div>
+                <div class="pb-6 w-full">
+                    <p class="text-sm font-bold text-slate-900">11:30 - 13:30</p>
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl mt-1 shadow-sm">
+                        <p class="text-blue-900 font-bold mb-2 flex items-center">
+                            <span class="mr-2">🚢</span> Rejs do miejscowości Lenno
+                        </p>
+                        <ul class="text-blue-800 text-sm space-y-1 list-disc list-inside mb-3">
+                            <li><strong>Obiad na pokładzie:</strong> Czas na posiłek z widokiem na jezioro.</li>
+                            <li>Odpoczynek, zdjęcia i podziwianie panoramy z pokładu.</li>
+                            <li><span class="font-bold uppercase text-xs bg-blue-200 px-1 rounded">Specjalny moment:</span> Lampka włoskiego wina! 🍷</li>
+                        </ul>
+                        <div class="rounded-lg overflow-hidden border border-blue-200">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Sentiero_del_Viandante_DSC_6340_%2814020554463%29.jpg" alt="Rejs po jeziorze Como" class="w-full h-32 object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lenno Arrival -->
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                    <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">5</div>
+                    <div class="w-0.5 h-full bg-slate-200 -mt-2"></div>
+                </div>
+                <div class="pb-6 w-full">
+                    <p class="text-sm font-bold text-slate-900">13:30 - 14:15</p>
+                    <p class="text-slate-700 font-semibold">Przyjazd do Lenno</p>
+                    <p class="text-slate-600 text-sm mb-2">Powolny, malowniczy spacer z portu w Lenno w kierunku półwyspu, na którym znajduje się willa. Spacer z portu do willi zajmuje około 20 minut</p>
+                    <div class="rounded-lg overflow-hidden h-40 w-full">
+                        <img src="https://rootcms.intura-travel.com/documents/users/317/editor/pics/r-italy/regions/lac%20de%20come/lenno-870.jpg" alt="Spacer w Lenno" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Villa del Balbianello -->
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                    <div class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">6</div>
+                    <div class="w-0.5 h-full bg-slate-200 -mt-2"></div>
+                </div>
+                <div class="pb-6 w-full">
+                    <p class="text-sm font-bold text-slate-900">14:00 - 16:00</p>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl mt-1 shadow-sm">
+                        <p class="text-emerald-900 font-bold mb-2 flex items-center">
+                            <span class="mr-2">🏛️</span> Villa del Balbianello
+                        </p>
+                        <p class="text-emerald-800 text-sm">
+                            Spędzenie 2 godzin na podziwianiu słynnych ogrodów. Czas na:
+                        </p>
+                        <ul class="text-emerald-800 text-sm mt-2 space-y-1 list-disc list-inside mb-4">
+                            <li>Robienie wyjątkowych zdjęć.</li>
+                            <li>Podziwianie unikalnej przyrody i architektury.</li>
+                            <li>Relaks w jednym z najpiękniejszych miejsc nad jeziorem.</li>
+                        </ul>
+
+                        <!-- Galeria Villi -->
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="rounded-lg overflow-hidden border border-emerald-200">
+                                <img src="https://italia-by-natalia.pl/wp-content/uploads/2024/11/ogrody-villi-del-balbianello-jezioro-como-4-920x690.jpg" alt="Willa z zewnątrz" class="w-full h-48 object-cover" />
+                            </div>
+                            <div class="rounded-lg overflow-hidden border border-emerald-200">
+                                <img src="https://www.kierunekwlochy.pl/wp-content/uploads/2023/12/villa-del-balbianello-13.jpg" alt="Ogrody tarasowe" class="w-full h-48 object-cover" />
+                            </div>
+                            <div class="rounded-lg overflow-hidden border border-emerald-200">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Villa_Balbianello_a_Lenno.jpg" alt="Willa z zewnątrz" class="w-full h-48 object-cover" />
+                            </div>
+                            <div class="rounded-lg overflow-hidden border border-emerald-200">
+                                <img src="https://cdn.getyourguide.com/img/location/a902d46ab1ecb4e3.jpeg/99.jpg" alt="Ogrody tarasowe" class="w-full h-48 object-cover" />
+                            </div>
+                            <div class="rounded-lg overflow-hidden border border-emerald-200">
+                                <img src="https://italia-by-natalia.pl/wp-content/uploads/2024/11/ogrody-villi-del-balbianello-jezioro-como-2-920x690.jpg" alt="Willa z zewnątrz" class="w-full h-48 object-cover" />
+                            </div>
+                            <div class="rounded-lg overflow-hidden border border-emerald-200">
+                                <img src="https://www.free-city-guides.com/wp-content/uploads/2025/12/Villa-del-Balbianello-Grass-Terrace-1024x686.jpg" alt="Ogrody tarasowe" class="w-full h-48 object-cover" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Return Trip -->
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                    <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">7</div>
+                    <div class="w-0.5 h-full bg-slate-200 -mt-2"></div>
+                </div>
+                <div class="pb-6 w-full">
+                    <p class="text-sm font-bold text-slate-900">16:00 - 17:50</p>
+                    <div class="bg-purple-50 border border-purple-100 p-4 rounded-xl mt-1 shadow-sm">
+                        <p class="text-purple-900 font-bold mb-1 flex items-center">
+                            <span class="mr-2">🚤</span> Powrót do Como
+                        </p>
+                        <ul class="text-purple-800 text-sm mt-2 space-y-1 list-disc list-inside">
+                            <li>Spacer powrotny do portu w Lenno. Czas wolny przed rejsem.</li>
+                            <li><strong>17:16</strong> – Odpłynięcie statku z Lenno do Como. Powrót: 35min</li>
+                            <li><strong>17:50</strong> – Przyjazd na przystań w Como.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Time in Como & Departure -->
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                    <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">8</div>
+                    <div class="w-0.5 h-full bg-slate-200 -mt-2"></div>
+                </div>
+                <div class="pb-6 w-full">
+                    <p class="text-sm font-bold text-slate-900">17:50 - 19:50</p>
+                    <p class="text-slate-700 font-semibold italic text-sm">Czas wolny w Como i powrót:</p>
+                    <ul class="text-slate-600 text-sm space-y-1 list-disc list-inside mt-1 mb-3">
+                        <li><strong>Czas wolny w mieście (2h)</strong>.</li>
+                        <li>Zasłużona kolacja i relaksujące drinki 🍹 w jednej z lokalnych restauracji.</li>
+                        <li><strong>19:50</strong> – Pociąg powrotny ze stacji Como San Giovanni do Zurychu.</li>
+                    </ul>
+                    <div class="rounded-lg overflow-hidden h-32 w-full mt-2">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kolacja w Como" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arrival in Zurich -->
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                    <div class="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">9</div>
+                </div>
+                <div class="pb-2 w-full">
+                    <p class="text-sm font-bold text-slate-900">22:27</p>
+                    <p class="text-slate-700 font-semibold italic text-sm">Koniec wycieczki:</p>
+                    <p class="text-slate-600 text-sm mt-1">Przyjazd na stację <strong>Zurich HB</strong> i zakończenie podróży.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="p-8 border-t border-slate-100 bg-slate-50 italic text-slate-500 text-center text-sm">
+        Udanej wycieczki i pięknej pogody we Włoszech!
+    </div>
+</div>
+
+<p class="text-center text-slate-400 mt-6 text-sm no-print">Kliknij "Zapisz jako PDF", aby pobrać gotowy plan podróży.</p>
+
+</body>
+</html>
